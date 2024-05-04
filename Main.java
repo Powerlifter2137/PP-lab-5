@@ -1,22 +1,8 @@
-import company.beans.Person;
+import company.implementations.EmailMessenger;
 
 public class Main {
     public static void main(String[] args) {
-        try {
-            Person person = new Person("Tomek", 21);
-            System.out.println("Name: " + person.getName());
-            System.out.println("Age: " + person.getAge());
-        } catch (Exception ex) {
-            System.out.println(ex);
-        }
-
-        try {
-            Person person = new Person("Piotr", 150);
-            System.out.println("Name: " + person.getName());
-            System.out.println("Age: " + person.getAge());
-        } catch (Exception ex) {
-            System.out.println(ex);
-        }
-
+        EmailMessenger emailMessenger = new EmailMessenger();
+        emailMessenger.sendMessage("this is email message");
     }
 }
